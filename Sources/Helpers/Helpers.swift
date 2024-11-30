@@ -7,10 +7,6 @@ extension Array {
         return reduce(1, *)
     }
 
-    public func count(where predicate: (Element) throws -> Bool) rethrows -> Int {
-        return try filter(predicate).count
-    }
-
     public func count(of element: Element) -> Int where Element: Equatable {
         return count(where: { $0 == element })
     }
@@ -23,7 +19,7 @@ extension Array {
 public func gcd<T: BinaryInteger>(_ x: T, _ y: T) -> T {
     var (x, y) = (x, y)
     while y > 0 {
-       (x, y) = (y, x % y)
+        (x, y) = (y, x % y)
     }
 
     return x

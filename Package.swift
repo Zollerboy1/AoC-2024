@@ -37,10 +37,7 @@ let package = Package(
                     "BigInt",
                     "Helpers",
                 ],
-                resources: [.copy("Resources/day\($0).txt")],
-                swiftSettings: [
-                    .enableUpcomingFeature("BareSlashRegexLiterals")
-                ]
+                resources: [.copy("Resources/day\($0).txt")]
             )
         }
 )
